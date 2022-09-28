@@ -1,0 +1,58 @@
+
+
+
+     <mat-card>
+      <mat-card-title>Login Details</mat-card-title>
+      
+      
+ <table>
+    <tr>
+      <td>email/username</td>
+      <td>
+            <!--input type="text" #idEditbox (input)="onEmailorusernameEdit(idEditbox.value)" [value]="id"/-->
+            <!--input type="text" [(ngModel)]="id" /-->
+            
+            
+              <mat-form-field appearance="standard">
+                <mat-label>Email/Username</mat-label>
+                <input matInput placeholder="Email/Username" [(ngModel)]="id" [value]="id"/>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>valid email / username (>8 char)</mat-hint>
+              </mat-form-field>
+               
+      </td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td>
+        <!--input type="text" #passwordEditbox (input)="onpasswordEdit(passwordEditbox.value)" [value]="password"/-->
+        <!-- two vay binding-->
+        <!--input type="text" [(ngModel)]="password" [value]="password"/-->
+            
+        <mat-form-field appearance="standard">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter Password" [(ngModel)]="password" [value]="password"/>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint> (>8 char with atleast one Uppercase char,one Lowercase char, one digit)</mat-hint>
+        </mat-form-field>
+            </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td>
+          <button mat-raised-button color="primary" type="button" (click)="Login()">Login</button></td>
+        <td><button  mat-raised-button color="primary" type="button" (click)="clear()"  >Clear</button></td>
+
+      </tr>
+      <tr><output>{{username}}</output></tr>
+    </table>
+
+  </mat-card>
+
+
+
+ 
+ 
+

@@ -1,0 +1,90 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!--span red-text-color >Philips Health Protal</span-->
+        <span textColor >Philips Health Protal   </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="example-button-row">
+    <!--<mat-card-title textColor [textColor]="'blue'">Welcome to Philips Protal</mat-card-title>-->
+    <!--<mat-card-title [textColor]="'blue'">{{"Welcome to Philips Protal" || Uppercase }}</mat-card-title>-->
+        <mat-card-title [textColor]="'blue'">Welcome to Philips Protal</mat-card-title>
+
+<mat-card-content>
+    <!--a mat-raised-button href="http://www.google.com/" target="_blank">Login</a-->
+    <a mat-raised-button [routerLink]="'./login'">Login</a>    
+    <a mat-raised-button [routerLink]="'./signup'">SignUp</a>
+    <a mat-raised-button [routerLink]="'./'">Back</a>
+</mat-card-content>
+
+<mat-card-content>
+    <router-outlet></router-outlet>
+</mat-card-content>
+
+</mat-card>
+
+
+
+<!--
+
+
+<button mat-raised-button>Click Me</button>
+<button (click)="goToPage('master')">
+    <span>Feature testing</span>
+ </button>
+
+-->
+ <!--event binding -->
+ <!--input type="text" [(ngModel)]="prop"/-->
+ <!--<mat-slider></mat-slider>
+<table>
+    <tr>
+
+ <input type="text" [(ngModel)]="prop" #formControlRef=ngModel/>
+
+<br/>
+ <output>{{formControlRef.dirty}}</output>
+ <br/>
+    -->
+ <!--input #textbox type="text" (input)="onTextBoxEdited(textbox.value)" [value]="prop"/-->
+  <br/>
+
+ <br/>
+ 
+ <br/>
+ 
+ <br/>
+ 
+ <br/>
+ 
+ <br/>
+  
+ 
+ <br/>
+ <!--<output>{{prop}}</output>
+ <button (click)="onChangeValue()">ChangePropValue</button>
+ -->
+ <!--
+ <br/>
+</tr>
+</table>
+-->
+<!--
+<form #formGrroupRef="ngForm" (ngSubmit)="onFormSubmit(formGrroupRef.form)">
+    <input type="text" name="userNameTextBox" [(ngModel)]="prop" #formControlRef=ngModel required=""/>
+
+    <div *ngIf="formControlRef.errors">
+        <output *ngIf="formControlRef.errors['required']">error</output>
+    </div>
+    <br/>
+     <output>{{"dirty: " + formControlRef.dirty}}</output>
+
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+</form>
+
+-->

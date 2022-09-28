@@ -1,0 +1,167 @@
+
+
+     <mat-card>
+      <mat-card-title>SignUp Details</mat-card-title>
+      
+
+ <table>
+    <tr>
+      <td>Username</td>
+      <td>
+        <div>
+        <form #formGrroupRef="ngForm" (ngSubmit)="onFormSubmit(formGrroupRef.form)">
+            <!--input type="text" name="userNameTextBox" [(ngModel)]="username" #formControlRef=ngModel required=""/-->
+            <input matInput  placeholder="Enter Username" type="text" #usernameEditbox (input)="onusernameEdit(usernameEditbox.value)" [value]="username"/>
+      
+
+            <!--input type="text" #usernameEditbox (input)="onusernameEdit(usernameEditbox.value)" [value]="username"/-->
+        </form></div>
+        </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        
+        <input matInput  placeholder="Enter Password" type="text" #passwordEditbox (input)="onpasswordEdit(passwordEditbox.value)" [value]="password"/>
+       
+          </td>
+    </tr>
+    <tr>
+      <td>Retype password</td>
+      <td>
+        
+        <input matInput  placeholder="Re-Enter password" type="text" #repasswordEditbox (input)="onrepasswordEdit(repasswordEditbox.value)" [value]="repassword"/>
+            </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+        
+        
+        <input matInput  placeholder="enter email" type="text" #emailEditbox (input)="onemailEdit(emailEditbox.value)" [value]="email"/>
+            </td>
+    </tr>
+    
+    <tr>
+        <td>Gender</td>
+        <td>
+          
+            <div class="form-group">
+                
+                <select style="outline: 1px;" id="gender" name="Gender" ngModel class="form-contrl">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">others</option>
+                </select>
+            </div>
+           </td>
+      </tr>
+      
+    <tr>
+        <td>Age</td>
+        <td>
+          <mat-form-field appearance="standard">
+            <mat-label>Age</mat-label>
+            <input matInput placeholder="Enter age" [(ngModel)]="age" [value]="age"/>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint> (>8 char with atleast one Uppercase char,one Lowercase char, one digit)</mat-hint>
+          </mat-form-field>
+          <!--input matInput  placeholder="enter age" [(ngModel)]="age" [value]="age"/-->
+              </td>
+      </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td><button mat-raised-button color="primary" type="button">SignUp</button></td>
+        <td><button mat-raised-button color="primary" type="button" (click)="clear()">Clear</button></td>
+
+      </tr>
+    </table>
+
+
+  </mat-card>
+
+
+ 
+ 
+
+
+<!--
+
+<table>
+    <tr>
+      <td><p>signup-component</p></td>
+      <td><button >
+        <span>Go to Home Page</span>
+     </button></td>
+     </tr>
+     </table>
+
+
+
+ <table>
+    <tr>
+      <td>Username</td>
+      <td>
+            <input type="text" #usernameEditbox (input)="onusernameEdit(usernameEditbox.value)" [value]="username"/>
+            </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="text" #passwordEditbox (input)="onpasswordEdit(passwordEditbox.value)" [value]="password"/>
+            </td>
+    </tr>
+    <tr>
+      <td>Retype password</td>
+      <td>
+        <input type="text" #repasswordEditbox (input)="onrepasswordEdit(repasswordEditbox.value)" [value]="repassword"/>
+            </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+        <input type="text" #emailEditbox (input)="onemailEdit(emailEditbox.value)" [value]="email"/>
+            </td>
+    </tr>
+    
+    <tr>
+        <td>Gender</td>
+        <td>
+            <div class="form-group">
+                
+                <select id="gender" name="Gender" ngModel class="form-contrl">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">others</option>
+                </select>
+            </div>
+           </td>
+      </tr>
+      
+    <tr>
+        <td>Age</td>
+        <td>
+          <input type="text" #ageEditbox (input)="onageEdit(ageEditbox.value)" [value]="age"/>
+              </td>
+      </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+        <td><button type="button">SignUp</button></td>
+        <td><button type="button" (click)="clear()">Clear</button></td>
+
+      </tr>
+    </table>
+
+
+
+
+
+ 
+ 
+
+
+-->
